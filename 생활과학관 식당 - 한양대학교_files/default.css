@@ -1,0 +1,119 @@
+
+
+	.makechat_wg_btn_show{
+	    position: fixed;
+		bottom:30px;
+		right:30px;
+		width:5rem;
+		height:5rem;
+		z-index:1000;
+	}
+
+	.makechat_wg_btn_show img{
+		width:5rem;
+		height:5rem;
+		cursor:pointer;
+		border-radius:50%;
+		z-index:1000;
+	}
+
+	.makechat_wg_btn_ani{
+		-webkit-animation: makechat_btn_jump 2s ease 0s 2 normal ;
+		animation: makechat_btn_jump 2s ease 0s 2 normal ;
+	}
+
+	@-webkit-keyframes makechat_btn_jump {
+	  0%{
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	  }
+	  20%{
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	  }
+	  40%{
+		-webkit-transform: translateY(-30px);
+		transform: translateY(-30px);
+	  }
+	  50%{
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	  }
+	  60%{
+		-webkit-transform: translateY(-15px);
+		transform: translateY(-15px);
+	  }
+	  80%{
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	  }
+	  100%{
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	  }
+	}
+
+	@keyframes makechat_btn_jump {
+	  0%{
+		transform: translateY(0);
+	  }
+	  20%{
+		transform: translateY(0);
+	  }
+	  40%{
+		transform: translateY(-30px);
+	  }
+	  50%{
+		transform: translateY(0);
+	  }
+	  60%{
+		transform: translateY(-15px);
+	  }
+	  80%{
+		transform: translateY(0);
+	  }
+	  100%{
+		transform: translateY(0);
+	  }
+	}
+
+	.makechat_wg_area_chat{
+	    position: fixed;
+		bottom:30px;
+		right:30px;
+
+		width:320px;
+		height:600px;
+		min-width: 340px !important;
+	    max-height: 600px !important;
+		border-radius:10px;
+        box-shadow: 0 6px 60px 0 rgba(81,99,120,0.3) !important;
+		display:none;
+		z-index:10000;
+	}
+
+	.makechat_wg_area_chat iframe{
+		width:100%;
+		height:650px;
+		min-width: 340px !important;
+	    max-height: 600px !important;
+		border:none !important;
+		border-radius:10px;
+		overflow:hidden !important;
+	}
+
+	.makechat_wg_msg{
+		font-size: 0.8rem;
+		color:#FFF;
+	    background: #0e3674;
+		border-radius: 15px;
+		box-sizing: border-box;
+		padding:10px;
+		
+	    position: fixed;
+		bottom:110px;
+		right:30px;
+		display:none;
+		z-index:1000;
+	}
+

@@ -1,0 +1,55 @@
+/*20180716*/
+
+@charset "utf-8";
+
+/*@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);*/
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans|Noto+Sans+SC|Open+Sans|Source+Sans+Pro');
+
+/***********************************************
+* 한양대 리뉴얼 2016 Css Import
+***********************************************/
+
+@import url("custom/dropdown.css");
+@import url("custom/dropdown.ultimate.css");
+
+/* 초기화 */						@import url("custom/reset.css");
+/* 개별리셋 */					@import url("custom/custom.css");
+/* 레이아웃 */					@import url("custom/layout_new.css");
+/* 템플릿 */						@import url("custom/template.css");
+/* 개별공통 */					@import url("custom/style_new.css");
+/* 모바일용 */					@import url("custom/mobile_new.css");
+/* 미디어 */						@import url("custom/grace_responsive.css");
+/* 미디어 */						@import url("custom/bbs_responsive.css");
+
+/*** 모듈 CSS. 모듈 CSS가 추가되면 계속 추가해주셔야 합니다. ***/
+/* 캠퍼스 */						@import url("custom/campus.css");
+/* 게시판 */						@import url("custom/portlet_bbs.css");
+/* 팝업 */							@import url("custom/iziModal.min.css");
+/* 뉴스 */							@import url("custom/news.css");
+/* 채널H */						@import url("custom/community.css");
+/* 서비스센터 */   			@import url("custom/cs.css");
+/* 마이크로사이트 */   	@import url("custom/micro.css");
+/* 마이서비스 */   			@import url("custom/service.css");
+/* 통합검색 */					@import url("custom/totalsearch.css");
+/* H bub */						@import url("custom/hub.css");
+/* 한양소개 */					@import url("custom/introduction.css");
+/* 입학교육 */					@import url("custom/admission.css");
+
+/* 영문 */					@import url("custom/eng.css");
+/* 중문 */					@import url("custom/chn.css");
+
+/***********************************************
+* 한양대 리뉴얼 2016 Base
+***********************************************/
+
+/*
+	@font-face {
+	font-family: 'NanumGothic';
+	font-style: normal;
+	font-weight: 400;
+	src: local('../font/NanumGothic'), local(※);
+	src: url('../font/NanumGothic.eot');
+	src: url('../font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+				url('../font/NanumGothic.woff') format('woff')
+}
+*/

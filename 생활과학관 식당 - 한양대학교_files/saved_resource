@@ -1,0 +1,127 @@
+
+
+var mk0=document.getElementsByTagName("script")[0];
+
+
+//CSS Insert
+var cssNode = document.createElement('link');
+cssNode.type = 'text/css';
+cssNode.rel = 'stylesheet';
+//cssNode.href = 'https://chatbot.hanyang.ac.kr/chat/plugin/default.css';
+cssNode.href = 'https://chatbot.hanyang.ac.kr/chat/plugin/default.css?v=1695472356';
+//mk0.parentNode.insertBefore(cssNode,mk0);
+
+//before가 i.e에서 안먹음
+//mk0.parentNode.before(cssNode,mk0);
+
+mk0.parentNode.appendChild(cssNode);
+mk0.parentNode.appendChild(mk0);
+
+//CSS Insert
+var cssNode = document.createElement('link');
+cssNode.type = 'text/css';
+cssNode.rel = 'stylesheet';
+cssNode.href = 'https://chatbot.hanyang.ac.kr/chat_partner/site.css?v=1695472356';
+mk0.parentNode.insertBefore(cssNode,mk0);
+
+//Jquery Insert
+var mk_jq = document.createElement("SCRIPT");
+mk_jq.src = 'https://chatbot.hanyang.ac.kr/chat/js_jquery/jquery-1.7.2.min.js';
+//mk_jq.src = 'http://service.makebot.ai/chat/plugin/jquery.js';
+mk_jq.type = 'text/javascript';
+mk_jq.onload = function() {
+	var $ = window.jQuery;
+	$.noConflict();
+
+	$(document).ready(function($){  
+
+
+		$('body').append('<div class="makechat_wg_area_chat">		<iframe src="" scrolling="no" frameborder="0" >  </div>');
+				$('body').append('<div class="makechat_wg_msg">궁금한게 있다면 챗봇에게 물어 보세요.</div>  <div class="makechat_wg_btn_show makechat_wg_btn_ani"><img src="https://chatbot.hanyang.ac.kr/chat_partner/images/btn_chat.png" alt="show_btn"></div>');  
+		
+		function bind_AI(){
+
+					$(".makechat_wg_btn_show").on('click',function() {
+				//pc
+				if(detectmob()==0){
+
+					$('.makechat_wg_area_chat').fadeIn();
+					$('.makechat_wg_area_chat iframe').attr('src', 'https://chatbot.hanyang.ac.kr/chat/chat/?p=3fvf32m02&d=pc');
+					$('.makechat_wg_area_chat iframe').attr('title', 'chatbotArea');
+					$(".makechat_wg_btn_show").hide();
+					$(".makechat_wg_btn_show").removeClass('makechat_wg_btn_ani');
+					$(".makechat_wg_msg").fadeOut();
+
+				}else{
+									window.open('https://chatbot.hanyang.ac.kr/chat/chat/?p=3fvf32m02');
+								}
+			}); 
+					$(".partner_wg_btn").on('click',function() {
+				//pc
+				if(detectmob()==0){
+
+					$('.makechat_wg_area_chat').fadeIn();
+					$('.makechat_wg_area_chat iframe').attr('src', 'https://chatbot.hanyang.ac.kr/chat/chat/?p=3fvf32m02&d=pc');
+					$(".makechat_wg_btn_show").hide();
+					$(".makechat_wg_btn_show").removeClass('makechat_wg_btn_ani');
+					$(".makechat_wg_msg").fadeOut();
+
+				}else{
+									window.open('https://chatbot.hanyang.ac.kr/chat/chat/index2.php?p=3fvf32m02');
+								}
+			}); 
+
+		}
+
+				setTimeout(function(){ 
+			$(".makechat_wg_msg").fadeIn('fast');
+		}, 5000);
+		setTimeout(function(){ 
+			$(".makechat_wg_msg").fadeOut();
+		}, 10000);
+				
+		setTimeout(function(){ 
+			bind_AI();
+		}, 500);
+
+	});
+
+	function close_chat(){
+		$('.makechat_wg_area_chat').fadeOut();
+		$('.makechat_wg_area_chat iframe').attr('src', '');
+		$(".makechat_wg_btn_show").fadeIn();
+		$(".makechat_wg_msg").fadeOut();
+	}
+
+	//iframe 내부 통신
+	window.addEventListener('message', function(e) {
+		//console.log(e.data.command);
+
+		if(e.data.command=='chat_close'){
+			close_chat();
+		}
+	});
+};
+mk0.parentNode.insertBefore(mk_jq,mk0);
+
+
+
+
+//detect mobile device
+function detectmob() { 
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+	return 1;
+  }
+ else {
+	return 0;
+  }
+}
+
+

@@ -1,0 +1,70 @@
+
+
+
+.makechat_wg_btn_show{
+	width:6rem;
+	height:6rem;
+}
+
+.makechat_wg_btn_show img{
+    width:6rem;
+    height:6rem;
+}
+
+
+.makechat_wg_msg{
+	font-size: 0.8rem;
+	color:#FFF;
+	background: #2530c0;
+	border-radius: 15px;
+	box-sizing: border-box;
+	padding:10px;
+	position: fixed;
+	bottom:115px;
+	right:30px;
+	display:none;
+}
+
+.makechat_wg_area_chat{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 400px;
+    height: 600px;
+    min-width: 400px !important;
+    max-height: 600px !important;
+    border-radius: 10px;
+    box-shadow: 0 6px 60px 0 rgba(81,99,120,0.3) !important;
+    display: none;
+    z-index: 10000;
+}
+
+/*tooltip*/
+.guide {
+    position:relative;
+    display: inline-block;
+	/*border-bottom: 1px dotted black;*/
+}
+.guide .toolTipTest {
+	/*visibility:hidden;/* �⺻��*/
+    width: 300px;
+    height: 30px;
+    background-color: #0069aa;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+    /*padding: 5px 0;*/
+    position: absolute;
+    z-index: 9999;
+    bottom: 90px;
+    right: -100px;
+    margin-left: -50px;
+    font-size: 14px;
+    line-height: 20px;
+	padding-top: 8px;
+}
+
+.guide:hover .toolTipTest {
+    visibility:visible;
+}
